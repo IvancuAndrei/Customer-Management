@@ -6,7 +6,7 @@ Customer Management is a web application built with Next.js, Tailwind CSS, Sprin
 
 ✨ Features
 
-    🔐 User authentication and registration
+    🔐 User authentication and registration using JWT and Spring Security
     📋 Complete customer management – add, view, update, and delete customer profiles
     📊 Detailed customer insights
 
