@@ -17,4 +17,6 @@ Customer Management is a web application built with Next.js, Tailwind CSS, Sprin
     🖥️ Spring Boot – Robust and scalable backend
     🗄️ PostgreSQL – Secure relational database
 
-Video soon
+🎥 Video coming soon !!!
+
+ 
