@@ -1,7 +1,8 @@
 package com.customerapp.customer_management_backend.service;
 
-import com.customerapp.customer_management_backend.dto.CustomerDTO;
+import com.customerapp.customer_management_backend.entity.dto.CustomerDTO;
 import com.customerapp.customer_management_backend.entity.Customer;
+import com.customerapp.customer_management_backend.entity.mappers.CustomerMapper;
 import com.customerapp.customer_management_backend.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,19 +12,17 @@ public class CustomerServiceImpl implements CustomerService{
 
     private final CustomerRepository customerRepository;
 
+    private final CustomerMapper customerMapper;
+
     @Autowired
-    public CustomerServiceImpl(CustomerRepository customerRepository) {
+    public CustomerServiceImpl(CustomerRepository customerRepository, CustomerMapper customerMapper) {
         this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
     }
 
     @Override
     public Customer createCustomer(CustomerDTO customerDTO) {
-        Customer customer = new Customer();
-        customer.setFirstName(customerDTO.getFirstName());
-        customer.setLastName(customerDTO.getLastName());
-        customer.setEmail(customerDTO.getEmail());
-        customer.setPhone(customerDTO.getPhone());
-        customer.setImageUrl((customerDTO.getImageUrl() == null || customerDTO.getImageUrl().isEmpty()) ? "https://customer-management-images.s3.eu-north-1.amazonaws.com/profile_icon.jpg" : customerDTO.getImageUrl());
+        Customer customer = customerMapper.toCustomer(customerDTO);
         return customerRepository.save(customer);
     }
 

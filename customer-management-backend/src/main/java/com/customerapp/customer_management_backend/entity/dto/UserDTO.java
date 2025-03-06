@@ -1,22 +1,17 @@
-package com.customerapp.customer_management_backend.dto;
+package com.customerapp.customer_management_backend.entity.dto;
 
 public class UserDTO {
 
-    private Long id;
     private String username;
     private String password;
     private String email;
 
-    public UserDTO(Long id, String username, String password, String email) {
-        this.id = id;
+    public UserDTO(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
     }
 
-    public Long getId() {
-        return id;
-    }
 
     public String getUsername() {
         return username;
@@ -30,9 +25,7 @@ public class UserDTO {
         return email;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public void setUsername(String username) {
         this.username = username;

@@ -1,7 +1,7 @@
 package com.customerapp.customer_management_backend.service;
 
 import com.customerapp.customer_management_backend.entity.User;
-import com.customerapp.customer_management_backend.dto.UserDTO;
+import com.customerapp.customer_management_backend.entity.dto.UserDTO;
 
 public interface UserService {
 

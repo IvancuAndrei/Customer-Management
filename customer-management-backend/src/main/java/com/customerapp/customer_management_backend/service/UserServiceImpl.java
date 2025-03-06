@@ -3,7 +3,7 @@ package com.customerapp.customer_management_backend.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.customerapp.customer_management_backend.repository.UserRepository;
-import com.customerapp.customer_management_backend.dto.UserDTO;
+import com.customerapp.customer_management_backend.entity.dto.UserDTO;
 import com.customerapp.customer_management_backend.entity.User;
 
 @Service

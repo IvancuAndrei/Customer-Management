@@ -1,6 +1,6 @@
 package com.customerapp.customer_management_backend.service;
 
-import com.customerapp.customer_management_backend.dto.CustomerDTO;
+import com.customerapp.customer_management_backend.entity.dto.CustomerDTO;
 import com.customerapp.customer_management_backend.entity.Customer;
 
 public interface CustomerService {
